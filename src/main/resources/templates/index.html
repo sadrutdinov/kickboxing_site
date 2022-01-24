@@ -5,6 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кикбоксинг в Ижевске</title>
+    <link rel="shortcut icon" type="image/ico" th:href="favicon.ico"/>
     <!-- Bootstrap CSS (Cloudflare CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
           integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
@@ -27,7 +28,7 @@
         <a class="p-2 text-dark" href="#h1">Расписание</a>
         <a class="p-2 text-dark" href="#h2">Стоимость</a>
         <a class="p-2 text-dark" href="#h3">Зал</a>
-        <a class="p-2 text-dark" href="#h4">Тренер</a>
+<!--        <a class="p-2 text-dark" href="#h4">Тренер</a>-->
         <a class="p-2 text-dark" href="#h5">Контакты</a>
     </nav>
 </div>
@@ -55,6 +56,7 @@
 <main role="main" class="container">
     <h1 class="mt-5" id="h1">Расписание</h1>
     <br>
+    <div class="table-responsive-sm">
     <table class="table table-striped">
         <thead>
         <tr>
@@ -79,6 +81,7 @@
         </tr>
         </tbody>
     </table>
+    </div>
     <br>
     <p class="lead">Длительность занятия младшей группы составляет 1 час, взрослой - 1,5 часа.</p>
 
@@ -87,6 +90,7 @@
 <main role="main" class="container">
     <h1 class="mt-5" id="h2">Стоимость</h1>
     <br>
+    <div class="table-responsive-sm">
     <table class="table table-striped">
         <thead>
         <tr>
@@ -118,6 +122,7 @@
         </tr>
         </tbody>
     </table>
+    </div>
     <br>
     <p class="lead">Первое занятие бесплатно. Актуальные цены уточняйте у <a href="https://vk.com/aydarfx">администратора.</a>
     </p>
@@ -126,6 +131,7 @@
 
 <main role="main" class="container">
     <h1 class="mt-5" id="h3">Зал</h1>
+    <br>
     <img src="зал готовый.jpg" class="img-fluid" alt="Responsive image">
     <br>
     <br>
@@ -142,10 +148,10 @@
 
 </main>
 
-<main role="main" class="container">
-    <h1 class="mt-5" id="h4">Тренер</h1>
-    <p class="lead"><a href="https://vk.com/ilgiz.sadrutdinov">Садрутдинов Ильгиз Инсафетдинович</a></p>
-</main>
+<!--<main role="main" class="container">-->
+<!--    <h1 class="mt-5" id="h4">Тренер</h1>-->
+<!--    <p class="lead"><a href="https://vk.com/ilgiz.sadrutdinov">Садрутдинов Ильгиз Инсафетдинович</a></p>-->
+<!--</main>-->
 
 <main role="main" class="container">
     <h1 class="mt-5" id="h5">Контакты</h1>
@@ -157,7 +163,7 @@
         Вход находится с торца здания.</p>
     <p>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A19dc15f86cf3ded93c53d5a8d323e1245392a28e2191a192d299a183900ab6f1&amp;source=constructor"
-                width="1100" height="500" frameborder="0"></iframe>
+               height="500" width="100%" frameborder="0"></iframe>
     </p>
 
     <p class="lead">Группа ВК: <a href="https://vk.com/kickboxing_izhevsk">Кикбоксинг│Ижевск│К-1</a></p>
