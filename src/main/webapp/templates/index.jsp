@@ -1,11 +1,14 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
+<%@ page contentType="text/html;charset=utf-8" %>
 <head>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кикбоксинг в Ижевске</title>
-    <link rel="shortcut icon" type="image/ico" th:href="favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="../static/favicon.ico"/>
     <!-- Bootstrap CSS (Cloudflare CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
           integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
@@ -22,13 +25,13 @@
 <body>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal"><img src="logo.png" class="rounded float-left" height="55">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><img src="../static/logo.png" class="rounded float-left" height="55">
     </h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="#h1">Расписание</a>
         <a class="p-2 text-dark" href="#h2">Стоимость</a>
         <a class="p-2 text-dark" href="#h3">Зал</a>
-<!--        <a class="p-2 text-dark" href="#h4">Тренер</a>-->
+        <!--        <a class="p-2 text-dark" href="#h4">Тренер</a>-->
         <a class="p-2 text-dark" href="#h5">Контакты</a>
     </nav>
 </div>
@@ -57,30 +60,30 @@
     <h1 class="mt-5" id="h1">Расписание</h1>
     <br>
     <div class="table-responsive-sm">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">Время</th>
-            <th scope="col">Понедельник</th>
-            <th scope="col">Среда</th>
-            <th scope="col">Пятница</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">17:30</th>
-            <td>Кикбоксинг (от 6 лет)</td>
-            <td>Кикбоксинг (от 6 лет)</td>
-            <td>Кикбоксинг (от 6 лет)</td>
-        </tr>
-        <tr>
-            <th scope="row">19:00</th>
-            <td>К-1 (от 14 лет)</td>
-            <td>К-1 (от 14 лет)</td>
-            <td>К-1 (от 14 лет)</td>
-        </tr>
-        </tbody>
-    </table>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Время</th>
+                <th scope="col">Понедельник</th>
+                <th scope="col">Среда</th>
+                <th scope="col">Пятница</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">17:30</th>
+                <td>Кикбоксинг (от 6 лет)</td>
+                <td>Кикбоксинг (от 6 лет)</td>
+                <td>Кикбоксинг (от 6 лет)</td>
+            </tr>
+            <tr>
+                <th scope="row">19:00</th>
+                <td>К-1 (от 14 лет)</td>
+                <td>К-1 (от 14 лет)</td>
+                <td>К-1 (от 14 лет)</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <br>
     <p class="lead">Длительность занятия младшей группы составляет 1 час, взрослой - 1,5 часа.</p>
@@ -91,47 +94,47 @@
     <h1 class="mt-5" id="h2">Стоимость</h1>
     <br>
     <div class="table-responsive-sm">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">Группа</th>
-            <th scope="col">Тип</th>
-            <th scope="col">Стоимость</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">Детская (17:30)</th>
-            <td>Разовое</td>
-            <td>200₽</td>
-        </tr>
-        <tr>
-            <th scope="row">Детская (17:30)</th>
-            <td>Абонемент (8 занятий)</td>
-            <td>1500₽</td>
-        </tr>
-        <tr>
-            <th scope="row">Детская (17:30)</th>
-            <td>Абонемент (12 занятий)</td>
-            <td>2000₽</td>
-        </tr>
-        <tr>
-            <th scope="row">Взрослая (19:00)</th>
-            <td>Разовое</td>
-            <td>250₽</td>
-        </tr>
-        <tr>
-            <th scope="row">Взрослая (19:00)</th>
-            <td>Абонемент (8 занятий)</td>
-            <td>2000₽</td>
-        </tr>
-        <tr>
-            <th scope="row">Взрослая (19:00)</th>
-            <td>Абонемент (12 занятий)</td>
-            <td>2500₽</td>
-        </tr>
-        </tbody>
-    </table>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Группа</th>
+                <th scope="col">Тип</th>
+                <th scope="col">Стоимость</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Детская (17:30)</th>
+                <td>Разовое</td>
+                <td>200₽</td>
+            </tr>
+            <tr>
+                <th scope="row">Детская (17:30)</th>
+                <td>Абонемент (8 занятий)</td>
+                <td>1500₽</td>
+            </tr>
+            <tr>
+                <th scope="row">Детская (17:30)</th>
+                <td>Абонемент (12 занятий)</td>
+                <td>2000₽</td>
+            </tr>
+            <tr>
+                <th scope="row">Взрослая (19:00)</th>
+                <td>Разовое</td>
+                <td>250₽</td>
+            </tr>
+            <tr>
+                <th scope="row">Взрослая (19:00)</th>
+                <td>Абонемент (8 занятий)</td>
+                <td>2000₽</td>
+            </tr>
+            <tr>
+                <th scope="row">Взрослая (19:00)</th>
+                <td>Абонемент (12 занятий)</td>
+                <td>2500₽</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <br>
     <p class="lead">Первое занятие бесплатно. Актуальные цены уточняйте у <a href="https://vk.com/aydarfx">администратора.</a>
@@ -142,18 +145,17 @@
 <main role="main" class="container">
     <h1 class="mt-5" id="h3">Зал</h1>
     <br>
-    <img src="зал готовый.jpg" class="img-fluid" alt="Responsive image">
+    <img src="../static/зал готовый.jpg" class="img-fluid" alt="Responsive image">
     <br>
     <br>
     <br>
     <br>
-    <img src="взрослые.jpg" class="img-fluid" alt="Responsive image">
+    <img src="../static/взрослые.jpg" class="img-fluid" alt="Responsive image">
     <br>
     <br>
     <br>
     <br>
-    <img src="дети.jpg" class="img-fluid" alt="Responsive image">
-
+    <img src="../static/дети.jpg" class="img-fluid" alt="Responsive image">
 
 
 </main>
@@ -173,7 +175,7 @@
         Вход находится с торца здания.</p>
     <p>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A19dc15f86cf3ded93c53d5a8d323e1245392a28e2191a192d299a183900ab6f1&amp;source=constructor"
-               height="500" width="100%" frameborder="0"></iframe>
+                height="500" width="100%" frameborder="0"></iframe>
     </p>
 
     <p class="lead">Группа ВК: <a href="https://vk.com/kickboxing_izhevsk">Кикбоксинг│Ижевск│К-1</a></p>

@@ -1,4 +1,4 @@
-package com.sai.kickboxing_site.controller;
+package com.sai.kickboxing_site.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
