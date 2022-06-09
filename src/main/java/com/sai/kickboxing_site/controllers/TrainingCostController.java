@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/training_cost")
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
@@ -22,7 +24,7 @@ public class TrainingCostController {
     @GetMapping("")
     public String showAllTrainingCost(Model model) {
 
-        Iterable<TrainingCost> allTrainingCost = trainingCostService.getAll();
+        List<TrainingCost> allTrainingCost = trainingCostService.getAll();
 
         model.addAttribute("allTrainingCost", allTrainingCost);
 

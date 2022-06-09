@@ -6,7 +6,10 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Component
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,8 +19,11 @@ public class TrainingCostServiceImpl implements TrainingCostService {
     private TrainingCostRepository repository;
 
     @Override
-    public Iterable<TrainingCost> getAll() {
-        return repository.findAll();
+    public List<TrainingCost> getAll() {
+        List<TrainingCost> all =
+                StreamSupport.stream(repository.findAll().spliterator(), false)
+                        .collect(Collectors.toList());
+        return all;
     }
 
     @Override

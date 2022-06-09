@@ -103,36 +103,14 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">Детская (17:30)</th>
-                <td>Разовое</td>
-                <td>200₽</td>
-            </tr>
-            <tr>
-                <th scope="row">Детская (17:30)</th>
-                <td>Абонемент (8 занятий)</td>
-                <td>1500₽</td>
-            </tr>
-            <tr>
-                <th scope="row">Детская (17:30)</th>
-                <td>Абонемент (12 занятий)</td>
-                <td>2000₽</td>
-            </tr>
-            <tr>
-                <th scope="row">Взрослая (19:00)</th>
-                <td>Разовое</td>
-                <td>250₽</td>
-            </tr>
-            <tr>
-                <th scope="row">Взрослая (19:00)</th>
-                <td>Абонемент (8 занятий)</td>
-                <td>2000₽</td>
-            </tr>
-            <tr>
-                <th scope="row">Взрослая (19:00)</th>
-                <td>Абонемент (12 занятий)</td>
-                <td>2500₽</td>
-            </tr>
+            <c:forEach var="trainingCost" items="${allTrainingCost}">
+                <tr>
+                    <td>${trainingCost.description}</td>
+                    <td>${trainingCost.type.description}</td>
+                    <td>${trainingCost.price}₽</td>
+                </tr>
+            </c:forEach>
+
             </tbody>
         </table>
     </div>
