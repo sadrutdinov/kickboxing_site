@@ -63,25 +63,20 @@
         <table class="table table-striped">
             <thead>
             <tr>
+                <th scope="col">Группа</th>
                 <th scope="col">Время</th>
-                <th scope="col">Понедельник</th>
-                <th scope="col">Среда</th>
-                <th scope="col">Пятница</th>
+                <th scope="col">Дни</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">17:30</th>
-                <td>Кикбоксинг (от 6 лет)</td>
-                <td>Кикбоксинг (от 6 лет)</td>
-                <td>Кикбоксинг (от 6 лет)</td>
-            </tr>
-            <tr>
-                <th scope="row">19:00</th>
-                <td>К-1 (от 14 лет)</td>
-                <td>К-1 (от 14 лет)</td>
-                <td>К-1 (от 14 лет)</td>
-            </tr>
+
+            <c:forEach var="training" items="${allTraining}">
+                <tr>
+                    <td>${training.name}</td>
+                    <td>${training.trainingTime}</td>
+                    <td>${training.trainingDays}</td>
+                </tr>
+            </c:forEach>
             </tbody>
         </table>
     </div>

@@ -5,23 +5,20 @@
 <head>
     <link rel="shortcut icon" type="image/ico" href="../static/favicon.ico"/>
 </head>
+
 <body>
 
 <h2>Информация о тренировке</h2>
 
-<form:form action="saveTrainingCost" modelAttribute="TrainingCost">
+<form:form action="saveTraining" modelAttribute="Training">
 
     <form:hidden path="id"/>
 
-    Описание <form:input path="description"/>
+    Название <form:input path="name"/>
     <br>
-    Тип <form:select path="type">
-        <form:option value="ONE">ONE</form:option>
-        <form:option value="EIGHT">EIGHT</form:option>
-        <form:option value="TWELVE">TWELVE</form:option>
-    </form:select>
+    Дни тренировки <form:input path="trainingDays"/>
     <br>
-    Цена <form:input path="price"/>
+    Время <form:input path="trainingTime"/>
     <br>
 
     <input type="submit" value="OK">
