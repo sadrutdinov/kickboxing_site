@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico"/>
+</head>
+
+<body>
+
+<h2>Информация о тренировке</h2>
+
+<form th:method="POST" th:action="@{/training_schedule/saveTraining}" th:object="${Training}">
+    <div>
+
+        <label hidden for="id">ID</label>
+        <input hidden type="text" id="id" th:field="*{id}"/>
+
+        <label for="name">Название</label>
+        <input required type="text" th:field="*{name}" id="name"/>
+        <br>
+
+        <label for="trainingTime">Время</label>
+        <input required id="trainingTime" type="text" th:field="*{trainingTime}"/>
+
+        <label for="trainingDays">Дни тренировки</label>
+        <input required id="trainingDays" type="text" th:field="*{trainingDays}"/>
+        <br>
+
+        <input type="submit" value="OK">
+    </div>
+</form>
+
+
+</body>
+</html>

@@ -4,15 +4,14 @@ import com.sai.kickboxing_site.entities.cost_of_training.TrainingCost;
 import com.sai.kickboxing_site.services.TrainingCostService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @Controller
 @RequestMapping("/training_cost")
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
@@ -35,14 +34,14 @@ public class TrainingCostController {
     public String addNewTrainingCost(Model model) {
 
         TrainingCost trainingCost = new TrainingCost();
-        model.addAttribute("TrainingCost", trainingCost);
+        model.addAttribute("trainingCost", trainingCost);
 
         return "TrainingCost-info";
     }
 
-    @RequestMapping("/saveTrainingCost")
-    public String saveTrainingCost(@ModelAttribute("TrainingCost") TrainingCost trainingCost) {
-
+    @PostMapping("/saveTrainingCost")
+    public String saveTrainingCost(@ModelAttribute("trainingCost") TrainingCost trainingCost) {
+        log.debug("trainingCost {}",trainingCost);
         trainingCostService.save(trainingCost);
 
         return "redirect:/training_cost";
@@ -53,7 +52,7 @@ public class TrainingCostController {
 
         TrainingCost trainingCost = trainingCostService.getTrainingCost(id);
 
-        model.addAttribute("TrainingCost", trainingCost);
+        model.addAttribute("trainingCost", trainingCost);
 
         return "TrainingCost-info";
     }

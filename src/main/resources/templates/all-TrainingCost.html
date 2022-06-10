@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico"/>
+</head>
+<body>
+<h2>Таблица стоимости тренировок</h2>
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Описание</th>
+        <th>Тип</th>
+        <th>Цена</th>
+        <th>Опции</th>
+    </tr>
+
+
+    <tr th:each="trainingCost: ${allTrainingCost}">
+
+
+        <td th:utext="${trainingCost.id}">...</td>
+        <td th:utext="${trainingCost.description}">...</td>
+        <td th:utext="${trainingCost.type}">...</td>
+        <td th:utext="${trainingCost.price}">...</td>
+        <td>
+            <form th:action="@{/training_cost/updateTrainingCost}">
+                <input type="hidden" th:name="TrainingCostId" th:value="${trainingCost.id}">
+                <input type="submit" value="Upd">
+            </form>
+            <form th:action="@{/training_cost/deleteTrainingCost}">
+                <input type="hidden" th:name="TrainingCostId" th:value="${trainingCost.id}">
+                <input type="submit" value="Del">
+            </form>
+        </td>
+    </tr>
+
+</table>
+<br>
+<input type="button" value="Создать" onclick="window.location.href = 'training_cost/addNewTrainingCost'">
+<br>
+<br>
+<input type="button" value="Назад в админку" onclick="window.location.href = 'admin'">
+</body>
+</html>
