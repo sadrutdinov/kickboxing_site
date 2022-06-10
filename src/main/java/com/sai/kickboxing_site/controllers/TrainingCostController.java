@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Slf4j
@@ -24,6 +25,7 @@ public class TrainingCostController {
     public String showAllTrainingCost(Model model) {
 
         List<TrainingCost> allTrainingCost = trainingCostService.getAll();
+        allTrainingCost.sort(Comparator.comparing(TrainingCost::getDescription).reversed().thenComparing(TrainingCost::getPrice));
 
         model.addAttribute("allTrainingCost", allTrainingCost);
 
@@ -41,7 +43,7 @@ public class TrainingCostController {
 
     @PostMapping("/saveTrainingCost")
     public String saveTrainingCost(@ModelAttribute("trainingCost") TrainingCost trainingCost) {
-        log.debug("trainingCost {}",trainingCost);
+        log.debug("trainingCost {}", trainingCost);
         trainingCostService.save(trainingCost);
 
         return "redirect:/training_cost";
