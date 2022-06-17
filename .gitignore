@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 src/main/resources/new.p12
 src/main/resources/todo.txt
-
+src/main/resources/application.properties
 ### IntelliJ IDEA ###
 .idea
 *.iws
